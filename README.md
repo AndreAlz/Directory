@@ -1,1 +1,1 @@
-# Direcory
+# Directory
