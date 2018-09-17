@@ -9,4 +9,5 @@ connectMySQL<-function(){
   myPassword = "PASSWORD"
   #Creacion del obj. de conexion
   con = dbConnect(m, user= myUsername, host= myHost, password= myPassword, dbname= myDbname, port= myPort)
+  
   return(con)}
