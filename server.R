@@ -9,6 +9,7 @@ source("conect.R")
 source("depurar.R")
 
 shinyServer(function(input, output, session) {
+  #FUNCION DE LOGIN####
   ####FUNCION DE LOGIN####
   output$login=renderUI({
     fluidPage(
@@ -341,6 +342,11 @@ shinyServer(function(input, output, session) {
   observeEvent(input$afirmaM,{output$confir=renderUI(tags$p("Estos son los ANEXOS duplicados"))})
   observeEvent(input$afirmaM,{
     if (tabledata!=0) {
+      tabledata[,1][is.na(tabledata[,1])]<-"--"
+      tabledata[,2][is.na(tabledata[,2])]<-"--"
+      tabledata[,4][is.na(tabledata[,4])]<-"--"
+      tabledata[,5][is.na(tabledata[,5])]<-"--"
+      tabledata[,6][is.na(tabledata[,6])]<-"--"
       conn=connectMySQL()
       duplicados=depurar(tabledata,conn)
       output$resultado=DT::renderDataTable({
