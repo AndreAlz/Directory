@@ -6,6 +6,10 @@ To understand how Shiny works in general, you have to understand the concept of 
 > Reactive programming is a subset of asynchronous programming and a paradigm where the availability of new information drives the logic forward rather than having control flow driven by a thread-of-execution.
 >- Jonas Bonér and Viktor Klang, [Reactive Programming vs. Reactive Systems](https://www.oreilly.com/ideas/reactive-programming-vs-reactive-systems)
 
+The reactivity and data flow of this repository is showed in this simple map:
+
+![Reactivity Map](https://user-images.githubusercontent.com/31576039/45839122-11f51680-bcd9-11e8-9e41-f906d103aa4f.png)
+
 This is an example of how the Shiny app looks like in the end:
 
 ![Overview](https://user-images.githubusercontent.com/31576039/45829616-f847d500-bcc0-11e8-9883-ce55a82eb261.png)
