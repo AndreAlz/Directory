@@ -16,7 +16,7 @@ RMySQL | Driver for the connection | [RMySQL package R](https://www.rdocumentati
 DT | Select row in the datatable rendered by Shiny | [DT package R](https://www.rdocumentation.org/packages/DT/versions/0.4)
 data.table | Better management of the information uploaded in an Excel file | [data.table package R](https://www.rdocumentation.org/packages/data.table/versions/1.11.6)
 readxl | Read and save the Excel file uploaded even though it is a 'xls' or 'xlsx' | [readxl package R](https://www.rdocumentation.org/packages/readxl/versions/1.1.0)
-Stringr | contente 2 | content 3
+Stringr | Creating a query to insert all the information form the Excel(found it in [here](https://user-images.githubusercontent.com/31576039/45834019-c425e180-bccb-11e8-9321-04dc81f1d093.png)) | [Stringr package R](https://www.rdocumentation.org/packages/stringr/versions/1.3.1)
 ## Functions
 ## Server
 ## UI
