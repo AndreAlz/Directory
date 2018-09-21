@@ -93,5 +93,18 @@ depurar<-function(fileb,conne){
   return(duplicados)
 }
 ```
-## Server
+
 ## UI
+The *ui.R* file it just used to render the different views in the webpage, as you can see in the following code:
+```R
+library(shiny)
+shinyUI(bootstrapPage(
+    uiOutput("login"),
+    uiOutput("admin"),
+    uiOutput("usr")
+  )
+)
+```
+As you can see there four lines of code because we are rendering all the information and functions of the webpage in the *server.R* file.
+
+## Server
