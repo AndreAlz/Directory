@@ -105,6 +105,6 @@ shinyUI(bootstrapPage(
   )
 )
 ```
-As you can see there four lines of code because we are rendering all the information and functions of the webpage in the *server.R* file.
+As you can see there are four lines of code because we are rendering all the information and functions of the webpage in the *server.R* file.
 
 ## Server
