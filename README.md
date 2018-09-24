@@ -134,5 +134,35 @@ output$login=renderUI({
       ))
   })
   ```
-  ### Admin and User Login
-  This function react to the changes on the values of [Main Login](https://github.com/AndreAlz/Directory/blob/master/README.md#main-login)
+### Admin and User Login
+This function react to the changes on the values of [Main Login](https://github.com/AndreAlz/Directory/blob/master/README.md#main-login)
+  ```R
+   observeEvent(input$entrar,{
+    output$admin=renderUI({
+      if (toString(input$usuario)=="admin" && toString(input$pw)=="mdy12345") {...}
+      
+   observeEvent(input$entrar,{
+    output$usr=renderUI({
+      if (toString(input$usuario)=="mdyuser" && toString(input$pw)=="12345") {...}
+  ```
+What we do is see if the user and the password are correct, if it so we would show differents views of the same web page with a different amount of functionalities. Actually, the admin user would have all the functionalities like **search**, **delete**, **insert** and **B¿bulk insert**, while the normal user just have the option to **search** and **show** the information.
+
+#### Bulk Insertion
+The function of bulk insertion is only available for the admin user as we said before, and for me is the most interesting function here we see its logic:
+```R
+observeEvent(input$afirmaM,{
+    if (tabledata!=0) {
+      tabledata[,1][is.na(tabledata[,1])]<-"--"
+      tabledata[,2][is.na(tabledata[,2])]<-"--"
+      tabledata[,4][is.na(tabledata[,4])]<-"--"
+      tabledata[,5][is.na(tabledata[,5])]<-"--"
+      tabledata[,6][is.na(tabledata[,6])]<-"--"
+      conn=connectMySQL()
+      duplicados=depurar(tabledata,conn)
+      output$resultado=DT::renderDataTable({
+        duplicados
+      })
+      tabledata<<-0
+    }
+  })
+```
