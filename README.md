@@ -122,6 +122,7 @@ source("depurar.R")
 ```
 ### Main Login
 This function will be show as the first view for the user. Its important to say that the *actionButton called "entrar"* will be observe for **login admin** and **login user**.
+```R
 output$login=renderUI({
     fluidPage(
       includeScript("entre.js"),
@@ -132,5 +133,6 @@ output$login=renderUI({
         actionButton("entrar", "ENTRAR")
       ))
   })
+  ```
   ### Admin and User Login
-  This function react to the changes on the values of [Main Login]()
+  This function react to the changes on the values of [Main Login](https://github.com/AndreAlz/Directory/blob/master/README.md#main-login)
