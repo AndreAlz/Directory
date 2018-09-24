@@ -108,3 +108,29 @@ shinyUI(bootstrapPage(
 As you can see there are four lines of code because we are rendering all the information and functions of the webpage in the *server.R* file.
 
 ## Server
+In *server.R* you will find all the libraries to be used and the _*.R_ files with different funcions:
+```R
+library(shiny)
+library(DBI)
+library(RMySQL)
+library(DT)
+library(data.table)
+library(readxl)
+library(stringr)
+source("conect.R")
+source("depurar.R")
+```
+### Main Login
+This function will be show as the first view for the user. Its important to say that the *actionButton called "entrar"* will be observe for **login admin** and **login user**.
+output$login=renderUI({
+    fluidPage(
+      includeScript("entre.js"),
+      mainPanel(
+        titlePanel("DIRECTORIO DE ANEXOS"),
+        textInput("usuario", "USUARIO"),
+        passwordInput("pw", "CLAVE"),
+        actionButton("entrar", "ENTRAR")
+      ))
+  })
+  ### Admin and User Login
+  This function react to the changes on the values of [Main Login]()
